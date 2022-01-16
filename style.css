@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root{
+    --color-fondo:#f5f3ee;
+    --color-distintivo:#d81a91;
+    
+    --color-menu-border-top:#d81a91;
+    --color-menu-border-bottom:#ccc;
+    --color-menu-hover-opcion-hover:#222;
+    --color-menu-hover-opcion:#bbb;
+
+    --color-opcion-menu:#888;
+    --color-opcion-menu-activo:#444;
+    --color-opcion-menu-hover:#222;
+    --color-opcion-menu-hover-background:#eeeeee;
+
+    --color-dato:#d81a91;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,20 +24,20 @@
     font-family: 'Playfair Display', serif;
 }
 body{
-    /* font-size: 1.2rem; */
+    font-size: 1.2rem;
     font-weight: 500;
-}
+    background: var(--color-fondo);
+}   
 
 .nav ul{
     width:90%;
     max-width: 50rem;
     margin: 1rem auto;
     display: flex;
-    border-top:3px solid #d81a91;
-    border-bottom: 1px solid #ccc;
+    border-top:3px solid var(--color-menu-border-top);
+    border-bottom: 1px solid var(--color-menu-border-bottom);
     flex-direction: row;
     justify-content:space-around;
-    color:#365699;
 }
 
 .nav_title{
@@ -31,7 +49,7 @@ body{
     text-align: center;
     display: inline-block;
     padding: 1rem 0;
-    color:#888;
+    color:var(--color-li);
     position:relative;
     font-weight: 500;
     transition: all .22s;
@@ -40,7 +58,7 @@ body{
 .nav li:after{
     width: 100%;
     height: 2px;
-    background: #d81a91;
+    background: var(--color-distintivo);
     bottom: -1px;
     left: 0;
     content:'';
@@ -50,7 +68,7 @@ body{
 }
 
 .nav li.active{
-    color:#444;
+    color:var(--color-opcion-menu-activo);
 }
 
 .nav li.active:after{
@@ -58,21 +76,40 @@ body{
 }
 
 .nav li:hover{
-    background: #f1f1f1;
-    color:#222;
+    background: var(--color-opcion-menu-hover-background);
+    color:var(--color-opcion-menu-hover);
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .nav ul:hover li{
-    color: #bbb;
+    color: var(--color-menu-hover-opcion);
 }
 
 .nav ul:hover li:hover{
-    color:#222;
+    color:var(--color-menu-hover-opcion-hover);
 }
 
 .container{
     width:90%;
     max-width: 50rem;
     margin: 1rem auto;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.subtitle{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.label{
+    font-style: oblique;
+}
+
+.data{
+    color:var(--color-dato);   
+    margin-left: 10px;
+    font-weight: 600;
 }
