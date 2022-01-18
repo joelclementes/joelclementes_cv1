@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
 
 :root{
-    --color-fondo:#f5f3ee;
-    --color-distintivo:#d81a91;
+    --color-fondo:#EAEAEA;
+    --color-fondo-informacion: #FFFFFF;
+    --color-distintivo:#DAA520;
     
-    --color-menu-border-top:#d81a91;
+    --color-menu-border-top:#DAA520;
     --color-menu-border-bottom:#ccc;
     --color-menu-hover-opcion-hover:#222;
     --color-menu-hover-opcion:#bbb;
@@ -14,17 +15,21 @@
     --color-opcion-menu-hover:#222;
     --color-opcion-menu-hover-background:#eeeeee;
 
-    --color-dato:#d81a91;
+    --color-title:#000000;
+    --color-subtitle:#999999;
+    --color-dato:#DAA520;
+    --color-parrafo:#444444;
+
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
 }
 body{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     background: var(--color-fondo);
 }   
@@ -94,14 +99,47 @@ body{
     width:90%;
     max-width: 50rem;
     margin: 1rem auto;
+    background: var(--color-fondo-informacion);
+    min-height: 768px;
 }
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    
+    padding:50px;
+}
+
+.block-content{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+p.acercademi{
+    padding: 0 80px;
+    color: var(--color-parrafo);
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 27px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
 .title{
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 55px;;
+    font-weight: 400;
+    color:var(--color-title);
 }
 .subtitle{
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 300;
+    color:var(--color-subtitle);
 }
 
 .label{
