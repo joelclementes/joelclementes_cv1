@@ -18,7 +18,7 @@
     --color-title:#000000;
     --color-subtitle:#999999;
     --color-dato:#DAA520;
-    --color-parrafo:#444444;
+    --color-parrafo:#353535;
 
 }
 
@@ -138,8 +138,8 @@ p.acercademi{
 }
 .subtitle{
     font-size: 20px;
-    font-weight: 300;
-    color:var(--color-subtitle);
+    font-weight: 400;
+    color:var(--color-title);
 }
 
 .label{
